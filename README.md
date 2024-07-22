@@ -6,6 +6,6 @@ The ROS Server is given by the company Xytron.
 
 <hr>
 <h3>Path Planning</h3> <br>
-    * 리스트
+    * 리스트 <br>
   ㄷ <h3>Heuristic Criteria</h3> <br>
 For a smooth turn, 
