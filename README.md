@@ -5,7 +5,7 @@ This project's objective is to design an algorithm for a 2D car plan a path to i
 The ROS Server is given by the company Xytron.
 
 <hr>
-<h3>Path Planning</h3>
+<h3>Path Planning</h3> <br>
     * 리스트
   ㄷ <h3>Heuristic Criteria</h3> <br>
 For a smooth turn, 
