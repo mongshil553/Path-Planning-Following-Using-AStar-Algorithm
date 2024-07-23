@@ -13,6 +13,7 @@ The map coordinate system differs from that of the car. To make calculation simp
 For a smooth turn, next nodes can only be on the 30 degrees left and right on both front and back. Say next nodes are selected 10px away from the car. We sample 4 nodes for both front and back, then these nodes are transformed into the map coordinate system. These nodes becomes the candidate nodes.
 
 <h4>3. Heuristic Criteria</h4> <br>
+The shortest path is not the optimum path since there can be irrational turns or the end position(rotation) might not meet the requirement.
 
 <hr>
 <h3>Path Following</h3>
