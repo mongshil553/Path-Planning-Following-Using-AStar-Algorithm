@@ -14,3 +14,8 @@ For a smooth turn, next nodes can only be on the 30 degrees left and right on bo
 
 <h4>3. Heuristic Criteria</h4> <br>
 
+<hr>
+<h3>Path Tracking</h3>
+<h4>1. Pure Pursuit</h4>
+
+<h4>2. P Control</h4>
