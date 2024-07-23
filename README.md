@@ -15,7 +15,8 @@ For a smooth turn, next nodes can only be on the 30 degrees left and right on bo
 <h4>3. Heuristic Criteria</h4> <br>
 
 <hr>
-<h3>Path Tracking</h3>
+<h3>Path Following</h3>
 <h4>1. Pure Pursuit</h4>
-
+Drive angle is determined with pure pursuit algorithm.
 <h4>2. P Control</h4>
+Reference and error can be calculated by yaw with respect to map coordinate system. The yaw valuable is a global variable therefore no localization is needed. By using P Control of yaw error, the car can be driven to follow the path.
