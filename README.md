@@ -21,12 +21,12 @@ The shortest path is not the optimum path since there can be irrational turns or
     ii) Error between current yaw and target end yaw.<br>
     The car trys to match the target end yaw. This means that car trys to make a path that can go straight to its target point and math the target end yaw.<br><br>
     iii) Intersection with the straight line to the end position and virtual barrier around goal. <br>
-    The virtual barriers are created around the goal where only the entrance is open. The car trys to avoid going straight to the goal when there is a collision with the virtual barrier. <br><br>
+    The virtual barriers are created around the goal where only the entrance is open. The car trys to avoid going straight to the goal when there is a collision with the virtual barrier.> <br><br-->
 
-    <!-- 조건 설명 필요함. i) 조건은 차가 무작전 목표 지점과 가까워지도록 하지만, 목표 각도, 자동차 하드웨어 한계를 벗어날 수 있음.  ii) 목표 각도로 차를 제어하려고 함. 이때 각도만 맞을 뿐, 직진을 했을 때 목표 지점과 offset이 발생할 수 있음. iii) ii)에서 발생하는 offset을 상쇄시켜줄 수 있음.-->
+    
   </dd>
 </dl>
-
+<!-- 조건 설명 필요함. i) 조건은 차가 무작전 목표 지점과 가까워지도록 하지만, 목표 각도, 자동차 하드웨어 한계를 벗어날 수 있음.  ii) 목표 각도로 차를 제어하려고 함. 이때 각도만 맞을 뿐, 직진을 했을 때 목표 지점과 offset이 발생할 수 있음. iii) ii)에서 발생하는 offset을 상쇄시켜줄 수 있음.-->
 
 <hr>
 <h3>Path Following</h3>
