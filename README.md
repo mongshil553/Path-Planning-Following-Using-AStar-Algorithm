@@ -34,7 +34,7 @@ The shortest path is not the optimum path since there can be irrational turns or
 <h3>Path Following</h3>
 <h4>1. Result</h4>
 //Add Image
-<h4>2. Pure Pursuit</h4>
-Drive angle is determined with pure pursuit algorithm.
+<h4>2. Angle Calculation</h4>
+<!--Drive angle is determined with pure pursuit algorithm.-->
 <h4>3. P Control</h4>
 Reference and error can be calculated by yaw with respect to map coordinate system. The yaw valuable is a global variable therefore no localization is needed. By using P Control of yaw error, the car can be driven to follow the path.
