@@ -12,9 +12,6 @@ The ROS Server is given by the company Xytron.
   <img src = "https://github.com/user-attachments/assets/407b1cf2-0e9c-4c2f-a501-f221bae28672" width="32.7%" height="32.7%">
 </kbd>
 
-
-
-
 <h4>2. Transformation Matrix</h4>
 The map coordinate system differs from that of the car. To make calculation simpler and with less error, the points in the car's coordinate system is transformed into the that of the map, and vice versa.
 
@@ -40,7 +37,13 @@ The shortest path is not the optimum path since there can be irrational turns or
 <hr>
 <h3>Path Following</h3>
 <h4>1. Result</h4>
-//Add Image
+<kbd>
+  <img src = "https://github.com/user-attachments/assets/c27589ea-73f2-4a0d-b222-e3081e17e3bf" width="35%" height="35%"> &nbsp;
+  <img src = "https://github.com/user-attachments/assets/62736a2e-3913-449e-a841-5a8e928bb5b5" width="36%" height="36%"> &nbsp;
+  <img src = "https://github.com/user-attachments/assets/9c6d211a-c775-45a6-987c-0bdb5f72d51a" width="25%" height="25%"> &nbsp;
+</kbd>
+
+
 <h4>2. Angle Calculation</h4>
 <!--Drive angle is determined with pure pursuit algorithm.-->
 <h4>3. P Control</h4>
