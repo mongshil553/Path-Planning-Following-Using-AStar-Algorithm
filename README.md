@@ -9,7 +9,7 @@ The ROS Server is given by the company Xytron.
 <h4>1. Result</h4>
 <kbd>
   <img src = "https://github.com/user-attachments/assets/4cb9a4a7-2ab1-48f7-a6f4-69a64c34f8ba" width="65%" height="65%"> &nbsp;
-  <img src = "https://github.com/user-attachments/assets/407b1cf2-0e9c-4c2f-a501-f221bae28672" width="32.5%" height="32.5%">
+  <img src = "https://github.com/user-attachments/assets/407b1cf2-0e9c-4c2f-a501-f221bae28672" width="32.7%" height="32.7%">
 </kbd>
 
 
