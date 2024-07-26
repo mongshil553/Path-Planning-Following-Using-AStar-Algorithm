@@ -34,11 +34,10 @@ def tracking(screen, x, y, yaw, velocity, max_acceleration, dt):
 
     pygame.draw.circle(screen, (100,100,100), (x,y), search_radius, 2) #차를 중심으로 검색 반경 그리기
 
-    #우선순위1
+    
     if (math.sqrt((AR[0]-x)**2 + (AR[1]-y)**2)) <= Stop_Tolerance: #주차장에 도착했다면
         drive(0, 0) #정지하기
 
-    #우선순위2
     elif any(pure_pursuit_detect(x, y, search_radius, p)[0] for p in finish_guide):
         for p in finish_guide: #주차장 가이드 중에 검색
             detected, pos = pure_pursuit_detect(x, y, search_radius, p) #주차장에 접근을 했는지
@@ -52,58 +51,7 @@ def tracking(screen, x, y, yaw, velocity, max_acceleration, dt):
 
                 drive(-gained_angle, target_velocity) #이동하기
     
-    #우선순위3
     else:
-        # 후진 경로가 존재하는 경우
-        
-        # 시나리오1 : 후진을 하다가 전진으로 바꾸는 기준
-        # if (rx[reverse_end_index] > x) & (ry[reverse_end_index] < y):
-        #     reverse_end_index = False
-        # 주어진 과제의 위치는 소화해내지만,
-        # --------> 어떤 방향에서 어느 좌표에서 시작하냐에 따라 만족하지 않는 경우 많음.
-
-
-        # 시나리오2 : 후진을 쪼개논 후진경로를 통해서 계속 진행하다가 car_path와의 거리가 10가까지되면
-        #            그때 전진경로를 바로 타고 들어감.
-        # ---------> 어느 위치에서 시작하든 다 가능할 것으로 예상됨.
-        # 여러 위치에 놓고 실험해봐야할듯
-        # 근데 루트를 돌때마다 계산해서 연산량이 많아지는것이 단점. 어쩔 수 없는 것 같기도 함.
-        # 그래서 후진 경로가 있는 경우에만 계산하도록 if reverse_end_index: 조건문 안으로 넣으려 했는데 잘 안됐음.
-
-
-        gear = 'Drive'
-        detected_arr = []
-        for p in car_path[::-1]:
-            detected, pos = pure_pursuit_detect(x, y, search_radius, p)
-            if detected:
-                detected_arr.append(pos)
-                #if len(detected_arr) == 2:
-                #    break
-        
-        
-        min_distance = float('inf') # 초기값 선언
-        for i in range(0,len(car_path)):     # 모든 경로에 대해서 최단거리 공식을 통해 거리 계산
-            if min_distance >= math.sqrt((car_path[i][0][0]-x)**2 + (car_path[i][0][1]-y)**2):
-                min_distance = math.sqrt((car_path[i][0][0]-x)**2 + (car_path[i][0][1]-y)**2) # 가장 작은값 선택
-        if min_distance > 90:   # 서치 반경인 10에 거의 가까워 지면 직진경로 따라가기 <값은 수정가능>
-            reverse_end_index = False   # False로 바꾸면후진 경로를 따라가는 코드를 건너뜀
-
-        if reverse_end_index:  # 후진 경로가 있는 경우  
-            for i in range(reverse_end_index - 1, -1, -1):  # 후진을 완료한 후 전진을 시작하는 인덱스부터 역순으로 진행
-                p = car_path[i]
-                detected, pos = pure_pursuit_detect(x, y, search_radius, p)
-                if detected:
-                    pygame.draw.circle(screen, (100,100,100), pos, 5)
-                    ref = calculate_reference(x, y, yaw, pos)  # 후진할 목표 위치 계산
-                    err, gained_angle = PID(ref, yaw)
-                    target_velocity = calc_velocity(abs(err))    
-                    drive(-gained_angle, -30)  # 후진을 진행 # 원래 후진할 때는 사람도 천천히 하므로 30선언
-                    # target_velocity를 사용하려 했지만 속도와 방향이 잘 제어되지 않는 문제가 있었어서 속도는 고정함.
-                    # 후진은 보통 천천히 하니 굳이 피드백 안써도 될듯함.
-                    print(-30)
-                    break
-            
-        else:  # 후진 경로가 없는 경우 # 원레 코드와 동일함
             for p in car_path[::-1]:
                 detected, pos = pure_pursuit_detect(x, y, search_radius, p)
                 if detected:
