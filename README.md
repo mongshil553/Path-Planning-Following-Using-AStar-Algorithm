@@ -39,8 +39,8 @@ The shortest path is not the optimum path since there can be irrational turns or
 <h4>1. Result</h4>
 <kbd>
   <img src = "https://github.com/user-attachments/assets/c27589ea-73f2-4a0d-b222-e3081e17e3bf" width="35%" height="35%"> &nbsp;
-  <img src = "https://github.com/user-attachments/assets/62736a2e-3913-449e-a841-5a8e928bb5b5" width="36%" height="36%"> &nbsp;
-  <img src = "https://github.com/user-attachments/assets/9c6d211a-c775-45a6-987c-0bdb5f72d51a" width="25%" height="25%"> &nbsp;
+  <img src = "https://github.com/user-attachments/assets/62736a2e-3913-449e-a841-5a8e928bb5b5" width="36.3%" height="36.3%"> &nbsp;
+  <img src = "https://github.com/user-attachments/assets/9c6d211a-c775-45a6-987c-0bdb5f72d51a" width="24.5%" height="24.5%"> &nbsp;
 </kbd>
 
 
